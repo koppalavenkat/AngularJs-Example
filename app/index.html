@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CXOsync</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/bootstrap.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <div class="main-section">
+    <nav class="navbar-section navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle navbar-toggle-sidebar collapsed">
+            MENU
+          </button>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="logo navbar-brand" href="#">
+            CXOsync
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-left" method="GET" role="search">
+            <div class="form-group">
+              <div class="icon-addon addon-sm">
+                <input type="text" placeholder="Search Event" class="form-control">
+                <label for="text" class="fa fa-search" rel="tooltip" title="text"></label>
+              </div>
+            </div>
+          </form>
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                EVENTS <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Events</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"> TICKETS</a>
+            </li>
+            <li>
+              <a href="#"> SETTINGS</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">
+                <div class="notification-count">
+                  <i class="fa fa-envelope"></i>
+                  <span class="count bg-success">05</span>
+                </div>
+              </a>
+            </li>
+            <li><a href="#">
+                <div class="notification-count">
+                  <i class="fa fa-bell"></i>
+                  <span class="count bg-danger">05</span>
+                </div>
+              </a>
+            </li>
+            <li class="dropdown ">
+              <a href="#" class="dropdown-toggle user-login" data-toggle="dropdown" role="button" aria-expanded="false">
+                <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Logout</a></li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid main-container">
+      <div class="sidebar">
+          <div class="absolute-wrapper"> </div>
+          <!-- Menu -->
+          <div class="side-menu">
+            <nav class="navbar navbar-default" role="navigation">
+              <!-- Main Menu -->
+              <div class="side-menu-container">
+                <ul class="nav navbar-nav side-bar">
+                  <li class="panel panel-default" id="dropdown">
+                    <a data-toggle="collapse" href="#dropdown">
+                      <span class="fa fa-calendar"></span> MY EVENTS <span class="caret"></span>
+                    </a>
+                    <div id="dropdown" class="panel-collapse collapse show">
+                      <div class="panel-body">
+                        <ul class="nav navbar-nav">
+                          <li><a href="#"><i class="fa fa-puzzle-piece"></i> UpComing Events</a></li>
+                          <li><a href="#"><i class="fa fa-id-badge"></i> Past Events</a></li>
+                          <li><a href="#"><i class="fa fa-id-badge"></i> Event Calendar</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+      </div>
+      <div class="content-section">
+          <div ng-view></div>
+        </div>
+    </div>
+  </div>
+  <script src="assets/angular/angular.js "></script>
+  <script src="assets/angular-route/angular-route.js "></script>
+  <script src="app.js "></script>
+  <script src="dashboard/dashboard.js "></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+
+</html>
